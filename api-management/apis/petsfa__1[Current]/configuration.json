@@ -1,0 +1,56 @@
+{
+  "id": "/apis/petsfa",
+  "name": "petsfa",
+  "apiRevision": "1",
+  "$ref-description": "api-management/apis/petsfa__1[Current]/api.description.html",
+  "serviceUrl": null,
+  "path": "petsfa",
+  "protocols": [
+    "https"
+  ],
+  "authenticationSettings": {
+    "oAuth2": null,
+    "openid": null
+  },
+  "subscriptionKeyParameterNames": {
+    "header": "Ocp-Apim-Subscription-Key",
+    "query": "subscription-key"
+  },
+  "isCurrent": true,
+  "operations": [
+    {
+      "id": "/apis/petsfa/operations/get-httptrigger1",
+      "name": "HttpTrigger1",
+      "method": "GET",
+      "urlTemplate": "/HttpTrigger1",
+      "templateParameters": [],
+      "$ref-description": "",
+      "request": {
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [],
+      "policies": null,
+      "$ref-policy": "api-management/policies/apis/petsfa__1[Current]/operations/GET__HttpTrigger1.xml"
+    },
+    {
+      "id": "/apis/petsfa/operations/post-httptrigger1",
+      "name": "HttpTrigger1",
+      "method": "POST",
+      "urlTemplate": "/HttpTrigger1",
+      "templateParameters": [],
+      "$ref-description": "",
+      "request": {
+        "queryParameters": [],
+        "headers": [],
+        "representations": []
+      },
+      "responses": [],
+      "policies": null,
+      "$ref-policy": "api-management/policies/apis/petsfa__1[Current]/operations/POST__HttpTrigger1.xml"
+    }
+  ],
+  "apiSchemas": [],
+  "__GitModuleVersion": 15
+}

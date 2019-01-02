@@ -1,0 +1,19 @@
+{
+  "id": "/products/unlimited",
+  "name": "Unlimited",
+  "$ref-description": "api-management/products/Unlimited/product.description.html",
+  "terms": null,
+  "subscriptionRequired": true,
+  "approvalRequired": true,
+  "subscriptionsLimit": 1,
+  "state": "published",
+  "$refs-groups": [
+    "api-management/groups/Administrators/configuration.json",
+    "api-management/groups/Developers/configuration.json",
+    "api-management/groups/Guests/configuration.json"
+  ],
+  "$refs-apis": [
+    "api-management/apis/Echo_API__1[Current]/configuration.json"
+  ],
+  "__GitModuleVersion": 15
+}

@@ -1,0 +1,16 @@
+{
+  "id": "/backends/petsfa",
+  "title": null,
+  "description": "petsfa",
+  "url": "https://petsfa.azurewebsites.net/api",
+  "protocol": "http",
+  "resourceId": "https://management.azure.com/subscriptions/d8b54f26-3c62-4ebd-8c6c-a6af10fc7e5b/resourceGroups/Learning/providers/Microsoft.Web/sites/petsfa",
+  "credentials": {
+    "query": {
+      "code": [
+        "{{petsfa-key}}"
+      ]
+    }
+  },
+  "__GitModuleVersion": 15
+}
