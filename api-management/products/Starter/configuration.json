@@ -13,7 +13,8 @@
     "api-management/groups/Guests/configuration.json"
   ],
   "$refs-apis": [
-    "api-management/apis/Echo_API__1[Current]/configuration.json"
+    "api-management/apis/Echo_API__1[Current]/configuration.json",
+    "api-management/apis/Httbin_API__1[Current]/configuration.json"
   ],
   "$ref-policy": "api-management/policies/products/Starter.xml",
   "__GitModuleVersion": 15

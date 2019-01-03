@@ -1,0 +1,50 @@
+{
+  "id": "/apis/httpbin",
+  "name": "Httbin API",
+  "apiRevision": "1",
+  "$ref-description": null,
+  "serviceUrl": "https://httpbin.org/",
+  "path": "httpbin",
+  "protocols": [
+    "https"
+  ],
+  "authenticationSettings": {
+    "oAuth2": null,
+    "openid": null
+  },
+  "subscriptionKeyParameterNames": {
+    "header": "Ocp-Apim-Subscription-Key",
+    "query": "subscription-key"
+  },
+  "isCurrent": true,
+  "operations": [
+    {
+      "id": "/apis/httpbin/operations/get",
+      "name": "Get",
+      "method": "GET",
+      "urlTemplate": "/get",
+      "templateParameters": [],
+      "$ref-description": "api-management/apis/Httbin_API__1[Current]/operations/GET__get.description.html",
+      "request": {
+        "queryParameters": [],
+        "headers": [],
+        "representations": [
+          {
+            "contentType": "application/json",
+            "$ref-sample": "api-management/apis/Httbin_API__1[Current]/operations/GET__get.request.application_json.html"
+          }
+        ]
+      },
+      "responses": [
+        {
+          "statusCode": 200,
+          "representations": [],
+          "headers": []
+        }
+      ],
+      "policies": null
+    }
+  ],
+  "apiSchemas": [],
+  "__GitModuleVersion": 15
+}
