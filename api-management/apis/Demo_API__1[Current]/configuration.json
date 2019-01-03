@@ -4,7 +4,7 @@
   "apiRevision": "1",
   "$ref-description": null,
   "serviceUrl": "https://httpbin.org/",
-  "path": "httpbin",
+  "path": "demoapi",
   "protocols": [
     "https"
   ],
