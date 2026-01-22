@@ -1,0 +1,85 @@
+<search-control></search-control>
+<div class="row">
+  <div class="col-md-9">
+    <h2>{% localized "PlanningStrings|PageTitlePlanning" %}</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">API Development Planning</h3>
+      </div>
+      <div class="panel-body">
+        <p>Welcome to the Planning page. Use this page to plan and organize your API development activities.</p>
+        
+        <h4>Current Planning Items</h4>
+        {% if planningItems.size > 0 %}
+        <ul class="list-unstyled">
+          {% for item in planningItems %}
+          <li>
+            <h4>
+              <a href="/planning/{{item.id}}">{{item.title}}</a>
+              {% if item.status == "InProgress" %}
+              <span class="label label-info">In Progress</span>
+              {% elsif item.status == "Completed" %}
+              <span class="label label-success">Completed</span>
+              {% elsif item.status == "Planned" %}
+              <span class="label label-default">Planned</span>
+              {% endif %}
+            </h4>
+            <p>{{item.description}}</p>
+            <div class="row">
+              <div class="col-md-6">
+                <strong>Priority:</strong> {{item.priority}}
+              </div>
+              <div class="col-md-6">
+                <strong>Due Date:</strong> <span class="UtcDateElement">{{ item.dueDate | date: "r" }}</span>
+              </div>
+            </div>
+            {% if item.assignedTo %}
+            <p><strong>Assigned To:</strong> {{item.assignedTo}}</p>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        <paging-control></paging-control>
+        {% else %}
+        <p>{% localized "CommonResources|NoItemsToDisplay" %}</p>
+        <p>Start planning your API development by creating a new planning item.</p>
+        {% endif %}
+        
+        {% if canCreatePlanning %}
+        <div class="text-center">
+          <a class="btn btn-primary" id="createPlanning" href="/planning/create">
+            <span class="glyphicon glyphicon-plus"></span>
+            Create New Planning Item
+          </a>
+        </div>
+        {% elsif isAuthenticated %}
+        <hr />
+        <p class="text-muted">You need appropriate permissions to create planning items.</p>
+        {% else %}
+        <hr />
+        <p>
+          Please <a href="/signin">sign in</a> to view and create planning items.
+        </p>
+        {% endif %}
+      </div>
+    </div>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Planning Resources</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <li><a href="/apis">View Available APIs</a> - Browse the APIs you can work with</li>
+          <li><a href="/products">View Products</a> - See available product offerings</li>
+          <li><a href="/docs">Documentation</a> - Read API documentation and guides</li>
+          <li><a href="/issues">Issues</a> - Report and track issues</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
