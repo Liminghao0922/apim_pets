@@ -41,7 +41,6 @@
             <p><strong>Assigned To:</strong> {{item.assignedTo}}</p>
             {% endif %}
           </li>
-          <hr />
           {% endfor %}
         </ul>
         <paging-control></paging-control>
@@ -63,10 +62,7 @@
         {% else %}
         <hr />
         <p>
-          {% capture signIntext %}Please{% endcapture %}
-          {% capture link %}<a href="/signin">sign in</a>{% endcapture %}
-          {% assign replaceString0 = '{0}' %}
-          {{ signIntext | append : " " | split : replaceString0 | join : link }} to view and create planning items.
+          Please <a href="/signin">sign in</a> to view and create planning items.
         </p>
         {% endif %}
       </div>
